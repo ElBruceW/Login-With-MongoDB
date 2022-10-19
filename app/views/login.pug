@@ -1,0 +1,17 @@
+extends ./layouts/layout.pug
+
+block contenido
+
+    .container
+        .row
+            div(class="d-flex justify-content-center" style="")
+                div(class="col-md-1")
+                .bg-light.mt-5(class="card h-100" style="width: 20rem;")
+                    .card-body 
+                       form(action="/login" method="POST")
+                            label() Username
+                            input(type="text", name="username" placeholder="You username" class="form-control mb-1")
+                            label(for="") Password 
+                            input(type="password", name="password" placeholder="You password" class="form-control mb-1")
+                            button(type="submit" class ="btn btn-primary mb-1 px-5") Login
+                            a(href="/register" class="link-warning") I Don't Have Account         
